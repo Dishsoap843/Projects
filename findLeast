@@ -1,0 +1,21 @@
+public static Integer findLeast(ArrayList<String> sentimentValues){
+  Double least = 1000.0;
+      for(int i = 0; i < sentimentValues.size(); i++){
+        String temp = sentimentValues.get(i);
+        String number = "";
+        for(int g = temp.indexOf(",") + 1; g < temp.length(); g++){
+          number += temp.substring(g, g + 1);
+          
+        }
+        Double numberNew = Double.parseDouble(number);
+        if(numberNew < least){
+          least = numberNew;
+        }
+      
+      }
+      System.out.println(least);
+      return least;
+
+
+
+
